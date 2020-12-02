@@ -1,0 +1,29 @@
+.layoutItem {
+    width: 100%;
+
+    &.-width {
+        width: var(--width);
+    }
+
+    &.-tiny {
+        width: var(--width-tiny);
+    }
+
+    &.-small {
+        @media (--from-small) {
+            width: var(--width-small);
+        }
+    }
+
+    &.-medium {
+        @media (--from-medium) {
+            width: var(--width-medium);
+        }
+    }
+
+    &.-large {
+        @media (--from-large) {
+            width: var(--width-large);
+        }
+    }
+}

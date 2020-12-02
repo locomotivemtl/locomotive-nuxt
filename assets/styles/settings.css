@@ -1,0 +1,75 @@
+/* Colors */
+:root {
+    --white: #ffffff;
+    --gray: #C0C0C0;
+    --black: #101010;
+}
+/* Families */
+:root {
+    /* --passenger: 'Passenger Sans'; */
+}
+/* Weights */
+:root {
+    --thin: 100;
+    --extralight: 200;
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+    --extrabold: 800;
+    --extrablack: 900;
+    --ultra: 1000;
+}
+/* Transitions */
+:root {
+    --speed: 0.3s;
+    --speed-fast: 0.1s;
+    --speed-medium: 0.2s;
+    --speed-slow: 0.6s;
+    --ease: cubic-bezier(0.65,0.05,0.36,1);
+}
+/* Elements */
+:root {
+    --header-tiny: 60px;
+    --header-small: 100px;
+    --header-medium: 120px;
+    --header-large: 160px;
+    --nav: 80px;
+}
+/* Medias */
+@custom-media --to-tiny (max-width: 499px);
+@custom-media --from-tiny (min-width: 500px);
+@custom-media --to-small (max-width: 699px);
+@custom-media --from-small (min-width: 700px);
+@custom-media --to-medium (max-width: 999px);
+@custom-media --from-medium (min-width: 1000px);
+@custom-media --to-large (max-width: 1199px);
+@custom-media --from-large (min-width: 1200px);
+@custom-media --to-big (max-width: 1399px);
+@custom-media --from-big (min-width: 1400px);
+@custom-media --to-huge (max-width: 1599px);
+@custom-media --from-huge (min-width: 1600px);
+@custom-media --to-enormous (max-width: 1799px);
+@custom-media --from-enormous (min-width: 1800px);
+@custom-media --to-gigantic (max-width: 1999px);
+@custom-media --from-gigantic (min-width: 2000px);
+@custom-media --to-colossal (max-width: 2399px);
+@custom-media --from-colossal (min-width: 2400px);
+
+/* Fonts */
+/* @font-face {
+    font-family: var(--passenger);
+    src: url('/fonts/passengersans/passengersans-regular.woff2') format('woff2'),
+         url('/fonts/passengersans/passengersans-regular.woff') format('woff');
+    font-weight: var(--regular);
+    font-style: normal;
+    font-display: swap;
+} */
+
+/* Other */
+::selection {
+    background-color: var(--black);
+    color: var(--white);
+    text-shadow: none;
+}

@@ -1,0 +1,40 @@
+.heading {
+    font-weight: var(--semibold);
+
+    &.-h1 {
+        font-size: 48px;
+
+        @media (--to-medium) {
+
+        }
+
+        @media (--from-medium) and (--to-large) {
+
+        }
+
+        @media (--from-large) {
+
+        }
+    }
+
+    &.-h2 {
+        font-size: 36px;
+    }
+
+    &.-h3 {
+        font-size: 24px;
+    }
+
+    &.-h5,
+    &.-h6 {
+        font-size: 1rem;
+    }
+
+    &:is(p) {
+        font-weight: var(--regular);
+    }
+
+    &.-nomargin {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,10 @@
+.button {
+    padding: 25px 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--bold);
+    transition: background-color var(--speed) var(--ease), border-color var(--speed) var(--ease), color var(--speed) var(--ease);
+    font-size: 1rem;
+    background-color: gray;
+}

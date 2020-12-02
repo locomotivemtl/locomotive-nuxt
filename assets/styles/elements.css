@@ -1,0 +1,43 @@
+/* Base styles */
+html {
+    font-family: sans-serif;
+    color: var(--black);
+    scroll-behavior: smooth;
+
+    @media (--to-small) {
+        font-size: 16px;
+        padding-top: var(--header-tiny);
+    }
+
+    @media (--from-small) and (--to-medium) {
+        padding-top: var(--header-small);
+    }
+
+    @media (--from-small) and (--to-big) {
+        font-size: 14px;
+    }
+
+    @media (--from-big) and (--to-enormous) {
+        font-size: 16px;
+    }
+
+    @media (--from-enormous) and (--to-gigantic) {
+        font-size: 18px;
+    }
+
+    @media (--from-gigantic) and (--to-colossal) {
+        font-size: 21px;
+    }
+
+    @media (--from-colossal) {
+        font-size: 24px;
+    }
+}
+
+body {
+
+}
+
+a {
+    color: currentColor;
+}

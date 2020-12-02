@@ -1,0 +1,9 @@
+.container {
+    @media (--to-small) {
+        margin: 0 20px;
+    }
+
+    @media (--from-small) {
+        margin: 0 40px;
+    }
+}

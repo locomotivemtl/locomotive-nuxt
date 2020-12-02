@@ -1,0 +1,22 @@
+.content {
+    &.-large {
+        line-height: 1.3;
+
+        @media (--from-medium) {
+            font-size: 32px;
+        }
+
+        @media (--to-medium) {
+            font-size: 24px;
+        }
+
+        & p {
+            line-height: 1.3;
+        }
+    }
+
+    & p {
+        margin-bottom: 40px;
+        line-height: 2;
+    }
+}
