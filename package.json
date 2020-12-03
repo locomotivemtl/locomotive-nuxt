@@ -9,9 +9,14 @@
         "generate": "nuxt generate"
     },
     "dependencies": {
+        "@nuxtjs/apollo": "^4.0.1-rc.5",
         "@nuxtjs/pwa": "^3.0.2",
         "core-js": "^3.6.5",
-        "nuxt": "^2.14.6"
+        "graphql-tag": "^2.11.0",
+        "lodash": "^4.17.20",
+        "nuxt": "^2.14.6",
+        "nuxt-vuex-localstorage": "^1.2.7",
+        "vue-apollo": "^3.0.5"
     },
     "devDependencies": {
         "eslint-config-prettier": "^6.12.0",

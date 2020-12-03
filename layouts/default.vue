@@ -6,14 +6,12 @@
 
 <script>
     import Vue from 'vue'
-    import globals from '~/mixins/globals.js'
+    import globals from '~/utils/globals.js'
 
     Vue.mixin(globals)
 
     export default {
-        mounted() {
 
-        }
     }
 </script>
 
