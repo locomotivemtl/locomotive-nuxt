@@ -1,0 +1,26 @@
+.product-tile {
+    text-align: left;
+    position: relative;
+}
+
+.product-tile_sale {
+    position: absolute;
+    top: 0; right: 0;
+    padding: 10px;
+    background-color: red;
+    color: white;
+}
+
+.product-tile_image-container {
+    & img {
+        width: 100%;
+    }
+}
+
+.product-tile_infos_label {
+    &.-sale {
+        text-decoration: line-through;
+        opacity: 0.5;
+        margin-left: 10px;
+    }
+}

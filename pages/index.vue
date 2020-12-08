@@ -10,22 +10,22 @@
             Button component
         </Button>
 
-        <ul>
-            <li v-for="product in products.edges">
-                {{product.node.title}}
-
-                <div v-for="image in product.node.images.edges">
-                    <img :src="image.node.originalSrc" alt="">
-                </div>
-            </li>
-        </ul>
+        <div v-if="$apollo.loading">Loading...</div>
+        <div v-else>
+            <Layout>
+                <LayoutItem v-for="(product, index) in products.edges" :key="index" width="50" medium="33">
+                    <ProductTile
+                        :product="product.node"
+                        :index="index"
+                    />
+                </LayoutItem>
+            </Layout>
+        </div>
     </Container>
 </template>
 
 <script>
     import gql from 'graphql-tag'
-
-    console.log('allo')
 
     export default {
         data: () => {
@@ -43,11 +43,33 @@
                                 node {
                                     id
                                     title
+                                    handle
                                     images(first: 1) {
                                         edges {
                                             node {
                                                 originalSrc
                                             }
+                                        }
+                                    }
+                                    priceRange {
+                                        maxVariantPrice {
+                                            amount
+                                            currencyCode
+                                        }
+                                        minVariantPrice {
+                                            amount
+                                            currencyCode
+                                        }
+                                    }
+                                    availableForSale
+                                    compareAtPriceRange {
+                                        maxVariantPrice {
+                                            amount
+                                            currencyCode
+                                        }
+                                        minVariantPrice {
+                                            amount
+                                            currencyCode
                                         }
                                     }
                                 }
@@ -58,13 +80,11 @@
             },
         },
         mounted() {
-            console.log(this)
+            console.log('loading:', this.$apollo.loading)
         },
-        // async fetch() {
-        //     this.products = await this.$apollo.queries.products
-        //     console.log(this.products)
-        // },
-        // fetchOnServer: false
+        created() {
+            console.log('loading:', this.$apollo.loading)
+        }
     }
 </script>
 
