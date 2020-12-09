@@ -1,6 +1,6 @@
 <template>
     <!-- TO DO ROUTING -->
-    <NuxtLink class="product-tile" :to="product.handle">
+    <NuxtLink class="product-tile" :to="`/products/${product.handle}`">
         <div v-if="product.availableForSale" class="product-tile_sale">
             <span class="product-tile_sale_label">Sale!</span>
         </div>

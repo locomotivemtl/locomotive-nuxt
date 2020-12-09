@@ -1,6 +1,7 @@
 .product-tile {
     text-align: left;
     position: relative;
+    display: block;
 }
 
 .product-tile_sale {
@@ -9,6 +10,7 @@
     padding: 10px;
     background-color: red;
     color: white;
+    z-index: 2;
 }
 
 .product-tile_image-container {
