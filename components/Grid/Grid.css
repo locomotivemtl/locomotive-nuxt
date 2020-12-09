@@ -1,0 +1,30 @@
+.grid {
+    display: grid;
+    min-width: 100%;
+
+    &.-gutter {
+        column-gap: var(--gutter);
+    }
+
+    &.-col {
+        grid-template-columns: repeat(var(--col), auto);
+    }
+
+    &.-col-small {
+        @media (--from-small) {
+            grid-template-columns: repeat(var(--col-small), auto);
+        }
+    }
+
+    &.-col-medium {
+        @media (--from-medium) {
+            grid-template-columns: repeat(var(--col-medium), auto);
+        }
+    }
+
+    &.-col-large {
+        @media (--from-large) {
+            grid-template-columns: repeat(var(--col-large), auto);
+        }
+    }
+}

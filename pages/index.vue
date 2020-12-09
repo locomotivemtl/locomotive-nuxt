@@ -12,14 +12,14 @@
 
         <div v-if="$apollo.loading">Loading...</div>
         <div v-else>
-            <Layout>
-                <LayoutItem v-for="(product, index) in products.edges" :key="index" width="50" medium="33">
+            <Grid gutter="20" col="2" col-large="3">
+                <GridItem v-for="(product, index) in products.edges" :key="index">
                     <ProductTile
                         :product="product.node"
                         :index="index"
                     />
-                </LayoutItem>
-            </Layout>
+                </GridItem>
+            </Grid>
         </div>
     </Container>
 </template>
