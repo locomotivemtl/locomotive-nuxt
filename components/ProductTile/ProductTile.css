@@ -2,6 +2,7 @@
     text-align: left;
     position: relative;
     display: block;
+    text-decoration: none;
 }
 
 .product-tile_sale {

@@ -15,8 +15,16 @@
                     <Heading size="h1">{{product.title}}</Heading>
 
                     <Wysiwyg>
-                        {{product.descriptionHtml}}
+                        <div v-html="product.descriptionHtml"></div>
                     </Wysiwyg>
+
+                    <ShopifySelectVariant
+                        :variants="this.product.variants.edges"
+                        :select-first="false"
+
+                    />
+
+                    <ShopifyAddToCart />
                 </GridItem>
             </Grid>
         </div>
@@ -115,7 +123,8 @@
             }
         },
         mounted() {
-            console.log('loading:', this.$apollo.loading)
+            console.log(this.product.availableForSale)
+            console.log(this.product.variants)
         },
         created() {
             console.log('loading:', this.$apollo.loading)

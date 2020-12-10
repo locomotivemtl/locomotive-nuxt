@@ -14,5 +14,5 @@
     }
 </script>
 
-<style src="./Wysiwyg.css" scoped></style>
+<style src="./Wysiwyg.css"></style>
 

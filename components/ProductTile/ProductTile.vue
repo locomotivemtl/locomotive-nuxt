@@ -1,7 +1,7 @@
 <template>
     <!-- TO DO ROUTING -->
     <NuxtLink class="product-tile" :to="`/products/${product.handle}`">
-        <div v-if="product.availableForSale" class="product-tile_sale">
+        <div v-if="product.availableForSale && product.compareAtPriceRange.minVariantPrice.amount > 0" class="product-tile_sale">
             <span class="product-tile_sale_label">Sale!</span>
         </div>
 
@@ -14,7 +14,7 @@
 
             <div class="product-tile_infos_prices">
                 <span class="product-tile_infos_label">{{product.priceRange.maxVariantPrice.amount}} {{product.priceRange.maxVariantPrice.currencyCode}}</span>
-                <span v-if="product.availableForSale" class="product-tile_infos_label -sale">{{product.compareAtPriceRange.maxVariantPrice.amount}} {{product.compareAtPriceRange.maxVariantPrice.currencyCode}}</span>
+                <span v-if="product.availableForSale && product.compareAtPriceRange.minVariantPrice.amount > 0" class="product-tile_infos_label -sale">{{product.compareAtPriceRange.minVariantPrice.amount}} {{product.compareAtPriceRange.minVariantPrice.currencyCode}}</span>
             </div>
         </div>
     </NuxtLink>
